@@ -1,0 +1,24 @@
+SELECT * FROM invtypes WHERE typeID = "17621";
+SELECT * FROM invtypes WHERE typeName LIKE "%Beam Laser Battery" AND published = "1";
+SELECT * FROM dgmtypeattributes WHERE typeID = "239";
+SELECT * FROM dgmtypeattributes WHERE attributeID = "792";
+SELECT * FROM dgmattributetypes WHERE attributeName LIKE "controlTower%Bonus";
+SELECT * FROM invcontroltowerresources WHERE controlTowerTypeID = "16213";
+SELECT typeID, typeName, quantity, basePrice, volume, mass, description FROM invcontroltowerresources INNER JOIN invtypes ON invcontroltowerresources.resourceTypeID=invtypes.typeID WHERE controlTowerTypeID = "16213";
+SELECT * FROM invtypes WHERE typeID = "44";
+SELECT dgmattributetypes.displayName, dgmattributetypes.attributeID,dgmattributetypes.attributeName, dgmtypeattributes.valueInt, dgmtypeattributes.valueFloat FROM dgmtypeattributes INNER JOIN dgmattributetypes ON dgmtypeattributes.attributeID=dgmattributetypes.attributeID WHERE typeID="16694";
+SELECT displayName, dgmattributetypes.attributeID, attributeName, valueInt, valueFloat FROM dgmtypeattributes INNER JOIN dgmattributetypes ON dgmtypeattributes.attributeID=dgmattributetypes.attributeID WHERE typeID="17621";
+SELECT * FROM invcontroltowerresources WHERE controlTowerTypeID = "16213";
+SELECT * FROM invtypes WHERE typeID = "44";
+SELECT * FROM invtypes WHERE typeName LIKE "%DEPLETED URANIUM XL" AND published = "1";
+SELECT * FROM invmarketgroups WHERE marketGroupID LIKE "1013";
+SELECT * FROM invgroups WHERE CategoryID = "23" AND published = "1" AND groupID != "365";
+SELECT * FROM invgroups WHERE groupID = "436" AND published = "1";
+SELECT * FROM invtypes WHERE groupID = "436" AND published = "1";
+
+SELECT itemName FROM mapdenormalize WHERE itemID = 40154719;
+SELECT constellationID,security FROM mapSolarSystems WHERE solarSystemID = 30002432;
+SELECT regionID,constellationName FROM mapConstellations WHERE constellationID = 20000357;
+SELECT regionName FROM mapRegions WHERE regionID = 10000029;
+SELECT itemName FROM mapdenormalize ORDER BY itemID DESC LIMIT 5;
+SELECT typeName FROM invTypes WHERE typeID = 12235;
